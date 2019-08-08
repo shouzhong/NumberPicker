@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <com.shouzhong.numberpicker.NumberPicker
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        app:npDividerColor="#999999"
+        app:npDividerDistance="40dp"
+        app:npDividerThickness="1dp"
+        app:npTextColor="#333333"
+        app:npSelectedTextColor="#333333"
+        app:npTextSize="20sp"
+        app:npSelectedTextSize="20sp"
+        app:npMin="1"
+        app:npMax="59"
+        app:npFormatter="%02d"
+        app:npWheelItemCount="5" />
+
+    <com.shouzhong.numberpicker.NumberPicker
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:npDividerColor="#999999"
+        app:npDividerDistance="60dp"
+        app:npDividerThickness="1dp"
+        app:npTextColor="#333333"
+        app:npSelectedTextColor="#333333"
+        app:npTextSize="20sp"
+        app:npSelectedTextSize="20sp"
+        app:npMin="1"
+        app:npMax="59"
+        app:npFormatter="%02d"
+        app:npOrientation="horizontal"/>
+</LinearLayout>

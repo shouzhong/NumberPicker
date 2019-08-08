@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberPicker">
+        <attr name="npDivider" format="reference" />
+        <attr name="npDividerColor" format="color" />
+        <attr name="npDividerDistance" format="dimension" />
+        <attr name="npDividerThickness" format="dimension" />
+        <attr name="npFadingEdgeEnabled" format="boolean" />
+        <attr name="npFadingEdgeStrength" format="float" />
+        <attr name="npFormatter" format="string" />
+        <attr name="npHideWheelUntilFocused" format="boolean" />
+        <attr name="npLineSpacingMultiplier" format="float" />
+        <attr name="npMax" format="integer" />
+        <attr name="npMaxFlingVelocityCoefficient" format="integer" />
+        <attr name="npMin" format="integer" />
+        <attr name="npOrder" format="enum">
+            <enum name="ascending" value="0" />
+            <enum name="descending" value="1" />
+        </attr>
+        <attr name="npOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="npScrollerEnabled" format="boolean" />
+        <attr name="npSelectedTextAlign" format="enum">
+            <enum name="selectedTextAlignRight" value="0" />
+            <enum name="selectedTextAlignCenter" value="1" />
+            <enum name="selectedTextAlignLeft" value="2" />
+        </attr>
+        <attr name="npSelectedTextColor" format="color" />
+        <attr name="npSelectedTextSize" format="dimension" />
+        <attr name="npSelectedTextStrikeThru" format="boolean" />
+        <attr name="npSelectedTextUnderline" format="boolean" />
+        <attr name="npTextAlign" format="enum">
+            <enum name="textAlignRight" value="0" />
+            <enum name="textAlignCenter" value="1" />
+            <enum name="textAlignLeft" value="2" />
+        </attr>
+        <attr name="npTextColor" format="color" />
+        <attr name="npTextSize" format="dimension" />
+        <attr name="npTextStrikeThru" format="boolean" />
+        <attr name="npTextUnderline" format="boolean" />
+        <attr name="npTypeface" format="string" />
+        <attr name="npValue" format="integer" />
+        <attr name="npWheelItemCount" format="integer" />
+        <attr name="npWrapSelectorWheel" format="boolean" />
+    </declare-styleable>
+</resources>
