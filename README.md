@@ -94,6 +94,7 @@ setOrientation | 滚动方向</br>HORIZONTAL：水平</br>VERTICAL：竖直
 setOrder | 数据排序方式</br>ASCENDING：正序</br>DESCENDING：倒序
 setMaxValue | 最大值
 setMinValue | 最小值
+setDisplayedValues | 自定义字符串
 setValue | 当前选中的值
 setFadingEdgeEnabled | 文本中间向两边是否逐渐变淡
 setFadingEdgeStrength | 变淡强度0~1f
