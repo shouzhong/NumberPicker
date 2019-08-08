@@ -64,6 +64,7 @@ npMaxFlingVelocityCoefficient | 最大滑动速度系数，越小越快
 
 ### java
 设置自定义字符串setDisplayedValues，配合setMinValue和setMaxValue使用，不然可能会脚标越界
+
 方法名 | 说明
 ------------ | -------------
 setDividerColor | 分割线颜色
