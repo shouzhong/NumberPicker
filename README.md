@@ -8,7 +8,7 @@
 ## 使用
 ### 依赖
 ```
-implementation 'com.shouzhong:NumberPicker:1.0.0'
+implementation 'com.shouzhong:NumberPicker:1.0.1'
 ```
 ### 代码
 ```

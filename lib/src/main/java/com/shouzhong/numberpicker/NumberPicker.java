@@ -103,7 +103,7 @@ public class NumberPicker extends LinearLayout {
     /**
      * 默认最小值
      */
-    private static final int DEFAULT_MIN_VALUE = 1;
+    private static final int DEFAULT_MIN_VALUE = 0;
 
     /**
      * 默认长度
@@ -1559,6 +1559,7 @@ public class NumberPicker extends LinearLayout {
 //        }
         mMinValue = minValue;
         if (mMinValue > mValue) {
+            notifyChange(mValue, mMinValue);
             mValue = mMinValue;
         }
         setWrapSelectorWheel(isWrappingAllowed());
@@ -1566,6 +1567,7 @@ public class NumberPicker extends LinearLayout {
         updateInputTextView();
         tryComputeMaxWidth();
         invalidate();
+
     }
 
     /**
@@ -1593,9 +1595,9 @@ public class NumberPicker extends LinearLayout {
         }
         mMaxValue = maxValue;
         if (mMaxValue < mValue) {
+            notifyChange(mValue, mMaxValue);
             mValue = mMaxValue;
         }
-
         updateWrapSelectorWheel();
         initializeSelectorWheelIndices();
         updateInputTextView();
