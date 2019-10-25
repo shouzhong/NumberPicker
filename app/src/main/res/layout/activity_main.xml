@@ -8,6 +8,7 @@
     android:gravity="center">
 
     <com.shouzhong.numberpicker.NumberPicker
+        android:id="@+id/np1"
         android:layout_width="100dp"
         android:layout_height="200dp"
         app:npDividerColor="#999999"

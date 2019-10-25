@@ -98,12 +98,12 @@ public class NumberPicker extends LinearLayout {
     /**
      * 默认最大值
      */
-    private static final int DEFAULT_MAX_VALUE = 100;
+    private static final int DEFAULT_MAX_VALUE = Integer.MAX_VALUE;
 
     /**
      * 默认最小值
      */
-    private static final int DEFAULT_MIN_VALUE = 0;
+    private static final int DEFAULT_MIN_VALUE = Integer.MIN_VALUE;
 
     /**
      * 默认长度
@@ -1344,6 +1344,7 @@ public class NumberPicker extends LinearLayout {
      */
     public void setOnValueChangedListener(OnValueChangeListener onValueChangedListener) {
         mOnValueChangeListener = onValueChangedListener;
+        notifyChange(mValue, mValue);
     }
 
     /**
@@ -1404,7 +1405,7 @@ public class NumberPicker extends LinearLayout {
      * @see #setMaxValue(int)
      */
     public void setValue(int value) {
-        setValueInternal(value, false);
+        setValueInternal(value, true);
     }
 
     private float getMaxTextSize() {
@@ -1558,7 +1559,7 @@ public class NumberPicker extends LinearLayout {
 //            throw new IllegalArgumentException("minValue must be >= 0");
 //        }
         mMinValue = minValue;
-        if (mMinValue > mValue) {
+        if (mValue < minValue) {
             notifyChange(mValue, mMinValue);
             mValue = mMinValue;
         }
@@ -1594,7 +1595,7 @@ public class NumberPicker extends LinearLayout {
             throw new IllegalArgumentException("maxValue must be >= 0");
         }
         mMaxValue = maxValue;
-        if (mMaxValue < mValue) {
+        if (mValue > maxValue) {
             notifyChange(mValue, mMaxValue);
             mValue = mMaxValue;
         }
@@ -2198,7 +2199,7 @@ public class NumberPicker extends LinearLayout {
      */
     private void notifyChange(int previous, int current) {
         if (mOnValueChangeListener != null) {
-            mOnValueChangeListener.onValueChange(this, previous, mValue);
+            mOnValueChangeListener.onValueChange(this, previous, current);
         }
     }
 
